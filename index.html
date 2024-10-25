@@ -1,196 +1,211 @@
 <!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>freeteens</title>
-<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
-<link href="trafors.css" rel="stylesheet">
-<link href="index.css" rel="stylesheet">
-</head>
-<body>
-<div id="Html2" style="position:absolute;left:186px;top:1809px;width:503px;height:100px;z-index:0">
-<div style="text-align: center;">
-  <button id="confirmButton" onclick="redirect()">Confirm 18+</button>
-</div>
-
-
-<script>
-  function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
-
-  function redirect() {
-    if (isMobileDevice()) {
-      window.open("https://www3.afego.life/click?pid=3749&offer_id=180&l=1592400100#join", "_blank");
-    } else {
-      window.open("https://www3.afego.life/click?pid=3749&offer_id=180&l=1592400100#join", "_blank");
-    }
-  }
-</script></div>
-<div id="Html1" style="position:absolute;left:198px;top:1697px;width:478px;height:112px;z-index:1">
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown</title>
-    </head>
-<body>
-    <div id="message">ACCESS WAITING</div> <!-- Updated message in red -->
-    <div id="countdown">00:00:08</div>
-    <div id="accessMessage"></div> <!-- New div for access message -->
-    <div id="newCountdown">00:05:00</div> <!-- New countdown timer for 5 minutes -->
-    <div id="suspendedMessage">ACCESS SUSPENDED</div> <!-- Suspended message -->
+    <title>freeteens</title>
+    <link href="trafors.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
 
-    <script>
-        var defaultTime = 0 * 60 + 8; // 0 minutes and 8 seconds in seconds
-        var totalTime = localStorage.getItem('countdownTime') 
-                       ? parseInt(localStorage.getItem('countdownTime')) 
-                       : defaultTime;
+        #container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
 
-        var countdownElement = document.getElementById("countdown");
-        var accessMessageElement = document.getElementById("accessMessage"); // Access message element
-        var newCountdownElement = document.getElementById("newCountdown"); // New countdown element
-        var suspendedMessageElement = document.getElementById("suspendedMessage"); // Suspended message element
+        #Html1, #wb_Image3, #Html3, #wb_Text1, #wb_Text2, #Html4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-        function updateCountdown() {
-            var hours = Math.floor(totalTime / 3600);
-            var minutes = Math.floor((totalTime % 3600) / 60);
-            var seconds = totalTime % 60;
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-            countdownElement.innerHTML =
-                (hours < 10 ? "0" : "") + hours + ":" +
-                (minutes < 10 ? "0" : "") + minutes + ":" +
-                (seconds < 10 ? "0" : "") + seconds;
+        #wb_Image3 img {
+            max-width: 100%;
+            height: auto;
+        }
 
-            if (totalTime > 0) {
-                totalTime--;
-                localStorage.setItem('countdownTime', totalTime);
-            } else {
-                clearInterval(interval);
-                document.getElementById("message").innerHTML = "ACCESS IS OPEN FOR FIVE MINUTES"; // Change message
-                document.getElementById("message").style.color = "#00FF00"; // Change color to green
-                countdownElement.style.display = 'none'; // Hide the first countdown
-                startNewCountdown(); // Start the new countdown
-                localStorage.removeItem('countdownTime'); // Clear time when finished
+        /* Стили для видео */
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #notification {
+            display: none;
+            color: green;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            button {
+                width: 90%;
+                font-size: 14px;
             }
         }
-
-        function startNewCountdown() {
-            var newTotalTime = 5 * 60; // 5 minutes in seconds
-            newCountdownElement.style.display = 'block'; // Show the new countdown
-            var newInterval = setInterval(() => {
-                var newHours = Math.floor(newTotalTime / 3600);
-                var newMinutes = Math.floor((newTotalTime % 3600) / 60);
-                var newSeconds = newTotalTime % 60;
-
-                newCountdownElement.innerHTML =
-                    (newHours < 10 ? "0" : "") + newHours + ":" +
-                    (newMinutes < 10 ? "0" : "") + newMinutes + ":" +
-                    (newSeconds < 10 ? "0" : "") + newSeconds;
-
-                if (newTotalTime > 0) {
-                    newTotalTime--;
-                } else {
-                    clearInterval(newInterval);
-                    accessMessageElement.innerHTML = ""; // Clear access message
-                    suspendedMessageElement.style.display = 'block'; // Show suspended message
-                    newCountdownElement.style.display = 'none'; // Hide the new countdown
-                    document.getElementById("message").style.display = 'none'; // Hide access message after timer ends
-                }
-            }, 1000);
-        }
-
-        var interval = setInterval(updateCountdown, 1000);
-    </script>
-</body>
-</html>
-</div>
-<div id="wb_Image3" style="position:absolute;left:171px;top:1052px;width:458px;height:645px;z-index:2;">
-<img src="images/Безымянный.png" id="Image3" alt="" width="458" height="645"></div>
-<div id="Html3" style="position:absolute;left:111px;top:575px;width:578px;height:302px;z-index:3">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
-    </head>
+    </style>
+</head>
 <body>
-    <div class="container">
+<div id="container">
+    <!-- Видео -->
+    <div id="Html4">
+        <div class="video-container">
+            <video controls>
+                <source src="videos/Xvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Изображение -->
+    <div id="wb_Image3">
+        <img src="images/Безымянный.png" alt="image">
+    </div>
+
+    <!-- Таймер -->
+    <div id="Html1">
+        <div id="message">ACCESS WAITING</div>
+        <div id="countdown">00:00:08</div>
+        <div id="accessMessage"></div>
+        <div id="newCountdown" style="display:none;">00:05:00</div>
+        <div id="suspendedMessage" style="display:none;">ACCESS SUSPENDED</div>
+    </div>
+
+    <!-- Генератор пароля -->
+    <div id="Html3">
         <input type="text" id="password" readonly>
         <button class="button" onclick="generatePassword()">GET ACCESS PASSWORD</button>
         <button class="button" onclick="copyPassword()">Copy Password</button>
         <div id="notification">Password copied!</div>
     </div>
 
-    <script>
-        function generatePassword() {
-            const length = Math.floor(Math.random() * (18 - 16 + 1)) + 16;
-            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+";
-            let password = "";
-            for (let i = 0; i < length; i++) {
-                const randomIndex = Math.floor(Math.random() * charset.length);
-                password += charset[randomIndex];
-            }
-            document.getElementById("password").value = password;
+    <!-- Тексты -->
+    <div id="wb_Text1">
+        <p>JOIN FOR FREE</p>
+    </div>
+    <div id="wb_Text2">
+        <p>confirm 18+ hold down the password field paste the copied password.</p>
+    </div>
+
+    <!-- Кнопка подтверждения в самом низу -->
+    <div id="Html2">
+        <button id="confirmButton" onclick="redirect()">Confirm 18+</button>
+    </div>
+</div>
+
+<script>
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    function redirect() {
+        window.open("https://www3.afego.life/click?pid=3749&offer_id=180&l=1592400100#join", "_blank");
+    }
+
+    // Таймер
+    var defaultTime = 0 * 60 + 8; // 0 minutes and 8 seconds in seconds
+    var totalTime = localStorage.getItem('countdownTime') 
+                   ? parseInt(localStorage.getItem('countdownTime')) 
+                   : defaultTime;
+
+    var countdownElement = document.getElementById("countdown");
+    var accessMessageElement = document.getElementById("accessMessage");
+    var newCountdownElement = document.getElementById("newCountdown");
+    var suspendedMessageElement = document.getElementById("suspendedMessage");
+
+    function updateCountdown() {
+        var hours = Math.floor(totalTime / 3600);
+        var minutes = Math.floor((totalTime % 3600) / 60);
+        var seconds = totalTime % 60;
+
+        countdownElement.innerHTML =
+            (hours < 10 ? "0" : "") + hours + ":" +
+            (minutes < 10 ? "0" : "") + minutes + ":" +
+            (seconds < 10 ? "0" : "") + seconds;
+
+        if (totalTime > 0) {
+            totalTime--;
+            localStorage.setItem('countdownTime', totalTime);
+        } else {
+            clearInterval(interval);
+            document.getElementById("message").innerHTML = "ACCESS IS OPEN FOR FIVE MINUTES";
+            document.getElementById("message").style.color = "#00FF00";
+            countdownElement.style.display = 'none';
+            startNewCountdown();
+            localStorage.removeItem('countdownTime');
         }
+    }
 
-        function copyPassword() {
-            const passwordField = document.getElementById("password");
-            if (passwordField.value) {
-                passwordField.select();
-                document.execCommand("copy");
+    function startNewCountdown() {
+        var newTotalTime = 5 * 60; // 5 minutes in seconds
+        newCountdownElement.style.display = 'block';
+        var newInterval = setInterval(() => {
+            var newHours = Math.floor(newTotalTime / 3600);
+            var newMinutes = Math.floor((newTotalTime % 3600) / 60);
+            var newSeconds = newTotalTime % 60;
 
-                const notification = document.getElementById("notification");
-                notification.style.display = "block";
-                setTimeout(() => {
-                    notification.style.display = "none";
-                }, 2000);
+            newCountdownElement.innerHTML =
+                (newHours < 10 ? "0" : "") + newHours + ":" +
+                (newMinutes < 10 ? "0" : "") + newMinutes + ":" +
+                (newSeconds < 10 ? "0" : "") + newSeconds;
+
+            if (newTotalTime > 0) {
+                newTotalTime--;
             } else {
-                alert("Please generate a password first!");
+                clearInterval(newInterval);
+                accessMessageElement.innerHTML = "";
+                suspendedMessageElement.style.display = 'block';
+                newCountdownElement.style.display = 'none';
+                document.getElementById("message").style.display = 'none';
             }
+        }, 1000);
+    }
+
+    var interval = setInterval(updateCountdown, 1000);
+
+    // Генератор пароля
+    function generatePassword() {
+        const length = Math.floor(Math.random() * (18 - 16 + 1)) + 16;
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+";
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            password += charset.charAt(Math.floor(Math.random() * charset.length));
         }
-    </script>
-</body>
-</html>
-</div>
-<div id="wb_Text1" style="position:absolute;left:251px;top:888px;width:299px;height:27px;text-align:center;z-index:4;">
-<p>JOIN FOR FREE</p></div>
-<div id="wb_Text2" style="position:absolute;left:126px;top:975px;width:548px;height:54px;text-align:center;z-index:5;">
-<p>confirm 18+&nbsp; hold down the password field&nbsp; paste the copied password.</p></div>
-<div id="Html4" style="position:absolute;left:0px;top:112px;width:800px;height:463px;z-index:6">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adaptive Video</title>
-    </head>
-<body>
-    <div class="video-container">
-        <video controls>
-            <source src="videos/Xvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</body>
-</html>
-</div>
-<div id="Html5" style="position:absolute;left:198px;top:1909px;width:478px;height:26px;z-index:7">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Site</title>
-    </head>
-<body>
-    <div class="container">
-        <h1>Welcome to My Responsive Website</h1>
-    </div>
-</body>
-</html>
-</div>
+        document.getElementById("password").value = password;
+    }
+
+    function copyPassword() {
+        const passwordField = document.getElementById("password");
+        if (passwordField.value) {
+            passwordField.select();
+            document.execCommand("copy");
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 2000);
+        } else {
+            alert("Please generate a password first!");
+        }
+    }
+</script>
 </body>
 </html>
