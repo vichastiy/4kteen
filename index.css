@@ -168,4 +168,27 @@ body
             margin: 15px 0;
             font-size: 20px; /* Set font size to 20px */
         }
+            body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height for centering */
+        }
+        .container {
+            max-width: 600px; /* Maximum width for larger screens */
+            width: 90%; /* Full width on smaller screens */
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+            border-radius: 12px; /* Rounded corners */
+        }
+        h1 {
+            font-size: 20px; /* Font size */
+            margin-bottom: 10px;
+        }
     
