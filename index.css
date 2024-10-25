@@ -89,18 +89,27 @@ body
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 5%; /* Minimum top margin */
-            font-size: 48px;
-            color: #ffff00; /* Yellow text color for the timer */
-            font-weight: bold; /* Bold text */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Full height for centering */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            background-color: #000; /* Background color */
+            color: #fff; /* Default text color for better contrast */
         }
         #message {
             margin-bottom: 10px; /* Minimum margin below the timer */
             font-size: 20px; /* Font size 20px */
             color: #FF0000; /* Red text color for the waiting message */
         }
+        #countdown {
+            font-size: 48px;
+            color: #ffff00; /* Yellow text color for the timer */
+            font-weight: bold; /* Bold text */
+        }
         #accessMessage {
-            font-size: 25px; /* Font size 25px for access message */
+            font-size: 25px; /* Font size for access message */
             color: #00FF00; /* Green color for access message */
             margin-top: 20px; /* Margin above the access message */
         }
@@ -140,15 +149,15 @@ body
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: calc(100% - 40px); /* Increased width */
+            width: calc(100% - 40px); /* Adjusted width */
             box-sizing: border-box;
             text-align: center;
             background: #222;
             color: #fff;
         }
         .button {
-            margin: 10px;
-            padding: 10px 20px; /* Adjusted padding */
+            margin: 10px 0; /* Vertical margin for spacing */
+            padding: 10px; /* Adjusted padding for better appearance */
             border: none;
             border-radius: 8px;
             background-color: #007bff;
@@ -167,6 +176,24 @@ body
             color: #28a745;
             margin: 15px 0;
             font-size: 20px; /* Set font size to 20px */
+        }
+            body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height for centering */
+        }
+        .video-container {
+            max-width: 800px; /* Max width for larger screens */
+            width: 100%; /* Full width on smaller screens */
+        }
+        video {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 12px; /* Optional: rounded corners */
         }
             body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
