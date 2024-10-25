@@ -1,0 +1,190 @@
+html, body
+{
+   height: 100%;
+}
+div#space
+{
+   width: 1px;
+   height: 50%;
+   margin-bottom: -1379px;
+   float:left
+}
+div#container
+{
+   width: 800px;
+   height: 2758px;
+   margin: 0 auto;
+   position: relative;
+   clear: left;
+}
+body
+{
+   background-color: #000000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#wb_Image3
+{
+   vertical-align: top;
+}
+#Image3
+{
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1
+{
+   color: #00FF00;
+   font-family: Arial;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 27.5px;
+}
+#wb_Text1 p, #wb_Text1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text2
+{
+   color: #FFFF00;
+   font-family: Arial;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 27.5px;
+}
+#wb_Text2 p, #wb_Text2 ul
+{
+   margin: 0;
+   padding: 0;
+}
+  #confirmButton {
+    background-color: #08C911; /* Салатовый цвет */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Закругленные углы */
+    padding: 15px 30px; /* Увеличенный внутренний отступ */
+    font-size: 16px;
+    font-weight: bold; /* Жирный шрифт */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px; /* Установите ширину кнопки */
+  }
+
+  #confirmButton:hover {
+    background-color: #7CB342; /* Темнее при наведении */
+  }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 5%; /* Minimum top margin */
+            font-size: 48px;
+            color: #ffff00; /* Yellow text color for the timer */
+            font-weight: bold; /* Bold text */
+        }
+        #message {
+            margin-bottom: 10px; /* Minimum margin below the timer */
+            font-size: 20px; /* Font size 20px */
+            color: #FF0000; /* Red text color for the waiting message */
+        }
+        #accessMessage {
+            font-size: 25px; /* Font size 25px for access message */
+            color: #00FF00; /* Green color for access message */
+            margin-top: 20px; /* Margin above the access message */
+        }
+        #newCountdown {
+            font-size: 48px; /* Font size for new countdown */
+            color: #ffff00; /* Yellow color for new countdown */
+            margin-top: 20px; /* Margin above the new countdown */
+            display: none; /* Initially hidden */
+        }
+        #suspendedMessage {
+            font-size: 25px; /* Font size for suspended message */
+            color: #FF0000; /* Red color for suspended message */
+            margin-top: 20px; /* Margin above the suspended message */
+            display: none; /* Initially hidden */
+        }
+            body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+        .container {
+            text-align: center;
+            background: #000;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            width: 90%; /* Full width on mobile */
+            max-width: 400px;
+        }
+        #password {
+            font-size: 20px; /* Set font size to 20px */
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: calc(100% - 40px); /* Increased width */
+            box-sizing: border-box;
+            text-align: center;
+            background: #222;
+            color: #fff;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px; /* Adjusted padding */
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 20px; /* Set font size to 20px */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%; /* Full width buttons */
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        #notification {
+            display: none;
+            color: #28a745;
+            margin: 15px 0;
+            font-size: 20px; /* Set font size to 20px */
+        }
+    

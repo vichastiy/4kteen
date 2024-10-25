@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>freeteens</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
+<link href="trafors.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+</head>
+<body>
+<div id="space"><br></div>
+<div id="container">
+<div id="Html2" style="position:absolute;left:149px;top:2431px;width:503px;height:100px;z-index:0">
+<div style="text-align: center;">
+  <button id="confirmButton" onclick="redirect()">Confirm 18+</button>
+</div>
+
+
+<script>
+  function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  function redirect() {
+    if (isMobileDevice()) {
+      window.open("https://www3.afego.life/click?pid=3749&offer_id=180&l=1592400100#join", "_blank");
+    } else {
+      window.open("https://www3.afego.life/click?pid=3749&offer_id=180&l=1592400100#join", "_blank");
+    }
+  }
+</script></div>
+<div id="Html1" style="position:absolute;left:169px;top:789px;width:463px;height:125px;z-index:1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    </head>
+<body>
+    <div id="message">ACCESS WAITING</div> <!-- Updated message in red -->
+    <div id="countdown">00:00:08</div>
+    <div id="accessMessage"></div> <!-- New div for access message -->
+    <div id="newCountdown">00:05:00</div> <!-- New countdown timer for 5 minutes -->
+    <div id="suspendedMessage">ACCESS SUSPENDED</div> <!-- Suspended message -->
+
+    <script>
+        var defaultTime = 0 * 60 + 8; // 0 minutes and 8 seconds in seconds
+        var totalTime = localStorage.getItem('countdownTime') 
+                       ? parseInt(localStorage.getItem('countdownTime')) 
+                       : defaultTime;
+
+        var countdownElement = document.getElementById("countdown");
+        var accessMessageElement = document.getElementById("accessMessage"); // Access message element
+        var newCountdownElement = document.getElementById("newCountdown"); // New countdown element
+        var suspendedMessageElement = document.getElementById("suspendedMessage"); // Suspended message element
+
+        function updateCountdown() {
+            var hours = Math.floor(totalTime / 3600);
+            var minutes = Math.floor((totalTime % 3600) / 60);
+            var seconds = totalTime % 60;
+
+            countdownElement.innerHTML =
+                (hours < 10 ? "0" : "") + hours + ":" +
+                (minutes < 10 ? "0" : "") + minutes + ":" +
+                (seconds < 10 ? "0" : "") + seconds;
+
+            if (totalTime > 0) {
+                totalTime--;
+                localStorage.setItem('countdownTime', totalTime);
+            } else {
+                clearInterval(interval);
+                document.getElementById("message").innerHTML = "ACCESS IS OPEN FOR FIVE MINUTES"; // Change message
+                document.getElementById("message").style.color = "#00FF00"; // Change color to green
+                countdownElement.style.display = 'none'; // Hide the first countdown
+                startNewCountdown(); // Start the new countdown
+                localStorage.removeItem('countdownTime'); // Clear time when finished
+            }
+        }
+
+        function startNewCountdown() {
+            var newTotalTime = 5 * 60; // 5 minutes in seconds
+            newCountdownElement.style.display = 'block'; // Show the new countdown
+            var newInterval = setInterval(() => {
+                var newHours = Math.floor(newTotalTime / 3600);
+                var newMinutes = Math.floor((newTotalTime % 3600) / 60);
+                var newSeconds = newTotalTime % 60;
+
+                newCountdownElement.innerHTML =
+                    (newHours < 10 ? "0" : "") + newHours + ":" +
+                    (newMinutes < 10 ? "0" : "") + newMinutes + ":" +
+                    (newSeconds < 10 ? "0" : "") + newSeconds;
+
+                if (newTotalTime > 0) {
+                    newTotalTime--;
+                } else {
+                    clearInterval(newInterval);
+                    accessMessageElement.innerHTML = ""; // Clear access message
+                    suspendedMessageElement.style.display = 'block'; // Show suspended message
+                    newCountdownElement.style.display = 'none'; // Hide the new countdown
+                    document.getElementById("message").style.display = 'none'; // Hide access message after timer ends
+                }
+            }, 1000);
+        }
+
+        var interval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+</div>
+<div id="wb_Image3" style="position:absolute;left:171px;top:1786px;width:458px;height:645px;z-index:2;">
+<img src="images/Безымянный.png" id="Image3" alt="" width="458" height="645"></div>
+<div id="Html3" style="position:absolute;left:169px;top:1377px;width:463px;height:302px;z-index:3">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    </head>
+<body>
+    <div class="container">
+        <input type="text" id="password" readonly>
+        <button class="button" onclick="generatePassword()">GET ACCESS PASSWORD</button>
+        <button class="button" onclick="copyPassword()">Copy Password</button>
+        <div id="notification">Password copied!</div>
+    </div>
+
+    <script>
+        function generatePassword() {
+            const length = Math.floor(Math.random() * (18 - 16 + 1)) + 16;
+            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+";
+            let password = "";
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+            document.getElementById("password").value = password;
+        }
+
+        function copyPassword() {
+            const passwordField = document.getElementById("password");
+            if (passwordField.value) {
+                passwordField.select();
+                document.execCommand("copy");
+
+                const notification = document.getElementById("notification");
+                notification.style.display = "block";
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 2000);
+            } else {
+                alert("Please generate a password first!");
+            }
+        }
+    </script>
+</body>
+</html>
+</div>
+<div id="wb_Text1" style="position:absolute;left:251px;top:1679px;width:299px;height:27px;text-align:center;z-index:4;">
+<p>JOIN FOR FREE</p></div>
+<div id="wb_Text2" style="position:absolute;left:126px;top:1732px;width:548px;height:54px;text-align:center;z-index:5;">
+<p>confirm 18+&nbsp; hold down the password field&nbsp; paste the copied password.</p></div>
+<div id="Html4" style="position:absolute;left:4px;top:914px;width:793px;height:463px;z-index:6">
+<video style="width: 100%; height: auto;" controls>
+    <source src="videos/Xvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></div>
+</div>
+</body>
+</html>
